@@ -1,0 +1,1 @@
+pandoc --wrap=none --metadata title="Shaping Perception_20.01" --section-divs --filter pandoc-sidenote -L tufte-handout.lua --template=tufte --css=tufte.css --from docx --to html5+smart -i The_Rite_of_Immortality-Thomas.docx -o The_Rite_of_Immortality-Thomas-Tufte.html

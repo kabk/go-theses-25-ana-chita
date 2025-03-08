@@ -1,0 +1,672 @@
+@charset "UTF-8";
+
+/* Import ET Book styles
+   adapted from https://github.com/edwardtufte/et-book/blob/gh-pages/et-book.css */
+
+@font-face {
+  font-family: "et-book";
+  src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
+  src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix")
+      format("embedded-opentype"),
+    url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff")
+      format("woff"),
+    url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf")
+      format("truetype"),
+    url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "et-book";
+  src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
+  src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix")
+      format("embedded-opentype"),
+    url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff")
+      format("woff"),
+    url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf")
+      format("truetype"),
+    url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf")
+      format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "et-book";
+  src: url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
+  src: url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix")
+      format("embedded-opentype"),
+    url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff")
+      format("woff"),
+    url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf")
+      format("truetype"),
+    url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf")
+      format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "et-book-roman-old-style";
+  src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
+  src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix")
+      format("embedded-opentype"),
+    url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff")
+      format("woff"),
+    url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf")
+      format("truetype"),
+    url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-size: 17px;
+  line-height: 22px;
+  text-align: justify;
+  overflow-x: hidden;
+}
+
+p {
+  text-indent: 1.5em; /* Adjust the value as needed */
+}
+
+.p1 {
+  text-indent: 0; /* Adjust the value as needed */
+}
+
+
+.last-title{
+  display:flex;
+  flex-direction: column;
+  gap:20px;
+}
+
+.title1 {
+  font-style: italic;
+  font-weight: bolder;
+}
+
+body {
+  width: 100%;
+  font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD",
+    "Book Antiqua", Georgia, serif;
+  background-color: #fffff8;
+  color: #111;
+  max-width: 100%;
+  counter-reset: sidenote-counter;
+  margin: 0;
+  padding: 0%;
+}
+
+sup {
+  font-size: 0.75em;
+  line-height: 0.75em;
+  color: #ffc311;
+  border-bottom: none;
+}
+
+sup::before {
+    content: "↗"; /* Choose your arrow from the list */
+    font-size: 0.7em; /* Ensures it stays the same size as the text */
+    font-weight:bolder;
+    vertical-align: baseline; /* Keeps it aligned with normal text */
+    margin-right: 2px; /* Adds some space between the arrow and the number */
+}
+
+.footnotes{
+    display: none;
+}
+
+.sidenote {
+  display: none;
+  position: relative;
+  float: right; /* Float right so it sits in the right margin */
+  width: 30%; /* Or 20em, or whatever width you like */
+  font-size: 1em; /* Often slightly smaller text for sidenotes */
+  line-height: 1.3; /* Tweak as needed */
+  color: #555; /* Tweak text color if you like */
+  margin-right: -35%; /* Slight negative margin to push it outside the page */
+  margin-top: 0%;
+  padding-left: 2%;
+  margin-bottom: 2%;
+  transition: opacity 0.2s ease-in-out;
+  text-align: left;
+  word-wrap: break-word; /* ✅ Ensures long words/URLs break */
+  overflow-wrap: break-word; /* ✅ Ensures they fit within the width */
+  white-space: normal; /* ✅ Allows wrapping */
+}
+
+.sidenote.active {
+    display: block;
+    opacity: 1;
+    color:#ffc311;
+}
+
+
+.images{
+  position: relative;
+  border: 0.5vw solid rgb(65, 79, 238);
+  float: left; /* Float right so it sits in the right margin */
+  width: 10vw; /* Or 20em, or whatever width you like */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: -15vw;
+  margin-right: auto;
+  display: block;
+  object-fit: cover;
+  margin-top:0%;
+  margin-bottom: 2%;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.images:hover {
+  transform: scale(1.05);
+}
+
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.fullscreen-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 5px solid white;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.imageTitle{
+  position: relative;
+  float: left; /* Float right so it sits in the right margin */
+  width: 11vw; /* Or 20em, or whatever width you like */
+  margin-left: -15vw; /* Slight negative margin to push it outside the page */
+  margin-top: -0.5vw;
+  margin-bottom: 2%;
+  font-size: 0.7em;
+  font-style: italic;
+  text-align: left;
+  color:rgb(65, 79, 238); ;
+}
+.allimages{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  z-index: 1000;
+}
+
+.citat {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  font-style: italic;
+  color: #ffc311;
+  margin-top: -1%;
+  margin-bottom: 1%;
+}
+
+.citat1 {
+  font-style: italic;
+  color:#ffc311;
+}
+
+a.footnote-ref,
+a.footnote-back {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+a.footnote-ref:hover,
+a.footnote-back:hover,
+a.footnote-ref:visited,
+a.footnote-back:visited {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  margin-top: 15%;
+  color:rgb(238, 65, 65);
+  text-align: left;
+  text-indent: 0em;
+}
+
+.title {
+  font-size: 3vw;
+  line-height: 4.5vw;
+  text-align: center;
+  color:rgb(65, 79, 238);
+  padding: 3%;
+  width: 60%;
+  max-width: 80%; /* Allow flexibility */
+  margin: 0 auto; /* Ensure horizontal centering */
+  /* border: 0.7vw dotted rgb(231, 52, 52); */
+}
+
+.nosup{
+  color:rgb(65, 79, 238);
+}
+
+.nosup1{
+  color:#ffc311;
+}
+
+.nosup::before {
+  content: ""; /* Choose your arrow from the list */
+}
+
+.nosup1::before {
+  content: ""; /* Choose your arrow from the list */
+}
+
+.section{
+  background: rgba(255, 253, 241, 0.9);
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Ensure each panel fills the viewport */
+  height: 100vh; /* Set height to viewport */
+  overflow-y: hidden; 
+  overflow-x:hidden;
+}
+
+.section1 {
+  padding:0;
+  background-color:rgb(255, 195, 17);
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.section10 {
+  padding:0;
+  background-color:rgb(65, 79, 238);
+  display: flex; 
+  flex-direction: column;
+  gap:20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.last-title{
+  color: #ffc311;
+  font-size: 2vw;
+  line-height: 3.5vw;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+.last-title1{
+  color: #ffc311;
+  font-size: 3vw;
+  line-height: 4.5vw;
+  text-align: center;
+  padding: 2%;
+  width: 60%;
+  max-width: 80%; /* Allow flexibility */
+  margin: 0 auto; /* Ensure horizontal centering */
+}
+
+.arrow2{
+  transform: rotate(-90deg) scale(5);
+  padding: 3%;
+  color:rgb(238, 65, 65);
+}
+
+.text {
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 99vh;
+  overflow: scroll;
+  position: absolute;
+  left: 0%;
+  padding-left: 25%;
+  padding-right: 25%;
+  color: #424141;
+}
+
+.text::-webkit-scrollbar {
+  display: none;
+}
+
+#sn2{
+    margin-top: -7%;
+}
+
+.text9 {
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 99vh;
+  overflow: scroll;
+  position: absolute;
+  left: 0%;
+  text-align: left;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.text9::-webkit-scrollbar {
+  display: none;
+}
+
+.arrow{
+  transform: rotate(90deg) scale(4);
+  padding: 7%;
+  color:rgb(238, 65, 65);
+}
+
+.last-paragraph {
+  margin-bottom: 10%;
+}
+
+.section9{
+  background-color:rgb(255, 195, 17, 0.9);
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 99vh;
+  text-align: left;
+}
+
+.text9{
+  color: rgb(65, 79, 238);
+    word-wrap: break-word; /* ✅ Ensures long words/URLs break */
+  overflow-wrap: break-word; /* ✅ Ensures they fit within the width */
+  white-space: normal; /* ✅ Allows wrapping */
+}
+.sidebar-menu {
+  position: fixed;
+  z-index: 10;
+  right: -27%;
+  margin-top: 2%;
+  width: 30%;
+  color: rgb(238, 65, 65);
+  padding: 5px;
+  font-weight:bold;
+}
+
+.sidebar-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 10px;
+}
+
+.sidebar-menu a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: rgb(255, 195, 17);
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.sidebar-menu a:hover .menu-title {
+  display: inline;
+  color: rgb(255, 195, 17);
+  font-size: 0.7em;
+  padding-left: 5px;
+}
+
+.sidebar-menu a.active {
+  color: rgb(238, 65, 65) !important;
+}
+
+.menu-title {
+  position: fixed;
+  right: 4%;
+  padding-left: 2%;
+  font-size: 0.5em;
+  display: none;
+}
+
+.menu-title.active {
+  padding-left: 2%;
+  font-size: 0.5em;
+  display: none;
+  color: rgb(238, 65, 65) !important;
+}
+
+.arrow-icon {
+  display: inline-block; /* Ensures it rotates properly */
+  transform: rotate(180deg); /* Rotates the arrow */
+}
+
+#sn40{
+  margin-top: 10%;
+}
+
+
+@media screen and (max-width: 850px) {
+
+  body {
+    width: 100%;
+    font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD",
+      "Book Antiqua", Georgia, serif;
+    background-color: #fffff8;
+    max-width: 100%;
+    counter-reset: sidenote-counter;
+    margin: 0;
+    padding: 0%;
+    overflow-x: hidden;
+  }
+
+  .images {
+      width: 90%; /* Full width or adjust accordingly */
+      display: block;
+  }
+  .imageTitle{
+    width: 11vw; /* Or 20em, or whatever width you like */
+    margin-top: -0.5vw;
+    margin-bottom: 2%;
+    font-size: 0.7em;
+    font-style: italic;
+    text-align: left;
+    color:rgb(65, 79, 238); ;
+  }
+  .allimages{
+    display: inline-block;
+    flex-direction: column;
+    gap: 1vw;
+  }
+
+  .sidebar-menu{
+    right: -23%;
+  }
+
+  .menu-title.active {
+    display: none;
+  }
+
+  .menu-title {
+    display: none;
+  }
+
+  .sidebar-menu a:hover .menu-title {
+    display: none;
+  }
+
+  .text {
+    padding-left: 10%;
+    padding-right: 22%;
+    text-align: left;
+    font-size: 0.9em;
+    line-height: 1.3em;
+    max-width: 78%;
+  }
+
+.section{
+  background: rgba(255, 253, 241, 0.9);
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Ensure each panel fills the viewport */
+  height: 100vh; /* Set height to viewport */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.section9{
+  background-color:rgb(255, 195, 17, 0.9);
+}
+.section1{
+  background-color:rgb(255, 195, 17, 0.9);
+}
+
+.allimages {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.images{
+  width: 100%;
+  position: relative;
+  border: 0.5vw solid rgb(65, 79, 238);
+  float: none; /* Float right so it sits in the right margin */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: 0;
+  margin-right: auto;
+  display: block;
+  object-fit: cover;
+  margin-top:0%;
+  margin-bottom: 2%;
+}
+
+.imageTitle{
+  position: relative;
+  float: none;
+  margin-left: 0; /* Slight negative margin to push it outside the page */
+  width: 100%;
+  margin-top: -0.5vw;
+  margin-bottom: 2%;
+  font-size: 0.7em;
+  font-style: italic;
+  text-align: left;
+  color:rgb(65, 79, 238); ;
+}
+
+/* .sup{
+  pointer-events: none;
+  cursor: default;
+}
+a.footnote-ref,
+a.footnote-back {
+  pointer-events: none; 
+  text-decoration: none !important;
+  border-bottom: none !important;
+  cursor: default;
+  color: inherit; 
+}
+
+a.footnote-ref:hover,
+a.footnote-back:hover,
+a.footnote-ref:visited,
+a.footnote-back:visited {
+  pointer-events: none;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  cursor: default;
+} */
+
+.sidenote:before {
+  content: counter(sidenote-counter) " ";
+  font-size: .8rem;
+  top: -0.2rem;
+}
+
+.sidenote-number:after, .sidenote:before {
+  position: relative;
+  vertical-align: baseline;
+}
+
+.sidenote {
+  position: relative;
+  float: none;
+  max-width: 70%;
+  width: 100%;
+  padding-left: 10%;
+  margin-top: 1%;
+}
+
+
+.sidenote.active {
+  display: block;
+}
+
+.title {
+  font-size: 5.5vw;
+  line-height: 7vw;
+  text-align: center;
+  color:rgb(65, 79, 238);
+  padding: 5%;
+  width: 70%;
+  max-width: 80%; /* Allow flexibility */
+  margin: 0 auto; /* Ensure horizontal centering */
+  /* border: 0.7vw dotted rgb(231, 52, 52); */
+}
+
+.arrow{
+  transform: rotate(90deg) scale(3);
+  padding: 10%;
+  color:rgb(238, 65, 65);
+}
+
+.section10 {
+  background-color:rgb(65, 79, 238);
+  padding:0;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.last-title{
+  color: #ffc311;
+  font-size: 3vw;
+  line-height: 3.5vw;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+.last-title1{
+  color: #ffc311;
+  font-size: 5.5vw;
+  line-height: 7vw;
+  text-align: center;
+  padding: 5%;
+  width: 70%;
+  max-width: 80%; /* Allow flexibility */
+  margin: 0 auto; /* Ensure horizontal centering */
+}
+
+.arrow2{
+  transform: translateY(-50%) rotate(-90deg) scale(5); 
+  color:rgb(238, 65, 65);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  
+} 
+}
