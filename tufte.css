@@ -72,7 +72,11 @@ html {
   line-height: 22px;
   text-align: justify;
   overflow-x: hidden;
+  hyphens: auto; /* Enable automatic hyphenation */
+  word-break: break-word; /* Ensure words break when necessary */
+  overflow-wrap: break-word; /* Allow words to wrap if too long */
 }
+
 
 p {
   text-indent: 1.5em; /* Adjust the value as needed */
