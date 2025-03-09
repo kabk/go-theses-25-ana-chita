@@ -90,12 +90,18 @@ p {
 .last-title{
   display:flex;
   flex-direction: column;
-  gap:20px;
+  word-wrap: normal;
+    word-break: keep-all;
+    hyphens: none;
+  padding-bottom: 1%;
 }
 
 .title1 {
   font-style: italic;
   font-weight: bolder;
+  word-wrap: normal;
+    word-break: keep-all;
+    hyphens: none;
 }
 
 body {
@@ -258,6 +264,9 @@ a.footnote-back:visited {
   color:rgb(65, 79, 238);
   padding: 3%;
   width: 60%;
+  word-wrap: normal;
+    word-break: keep-all;
+    hyphens: none;
   max-width: 80%; /* Allow flexibility */
   margin: 0 auto; /* Ensure horizontal centering */
   /* border: 0.7vw dotted rgb(231, 52, 52); */
@@ -317,6 +326,9 @@ a.footnote-back:visited {
   line-height: 3.5vw;
   font-style: italic;
   font-weight: bolder;
+  word-wrap: normal;
+  word-break: keep-all;
+  hyphens: none;
 }
 
 .last-title1{
@@ -326,6 +338,9 @@ a.footnote-back:visited {
   text-align: center;
   padding: 2%;
   width: 60%;
+  word-wrap: normal;
+    word-break: keep-all;
+    hyphens: none;
   max-width: 80%; /* Allow flexibility */
   margin: 0 auto; /* Ensure horizontal centering */
 }
