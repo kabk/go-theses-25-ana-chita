@@ -77,7 +77,6 @@ html {
   overflow-wrap: break-word; /* Allow words to wrap if too long */
 }
 
-
 p {
   text-indent: 1.5em; /* Adjust the value as needed */
 }
@@ -86,13 +85,12 @@ p {
   text-indent: 0; /* Adjust the value as needed */
 }
 
-
-.last-title{
-  display:flex;
+.last-title {
+  display: flex;
   flex-direction: column;
   word-wrap: normal;
-    word-break: keep-all;
-    hyphens: none;
+  word-break: keep-all;
+  hyphens: none;
   padding-bottom: 1%;
 }
 
@@ -100,8 +98,8 @@ p {
   font-style: italic;
   font-weight: bolder;
   word-wrap: normal;
-    word-break: keep-all;
-    hyphens: none;
+  word-break: keep-all;
+  hyphens: none;
 }
 
 body {
@@ -124,15 +122,15 @@ sup {
 }
 
 sup::before {
-    content: "↗"; /* Choose your arrow from the list */
-    font-size: 0.7em; /* Ensures it stays the same size as the text */
-    font-weight:bolder;
-    vertical-align: baseline; /* Keeps it aligned with normal text */
-    margin-right: 2px; /* Adds some space between the arrow and the number */
+  content: "↗"; /* Choose your arrow from the list */
+  font-size: 0.7em; /* Ensures it stays the same size as the text */
+  font-weight: bolder;
+  vertical-align: baseline; /* Keeps it aligned with normal text */
+  margin-right: 2px; /* Adds some space between the arrow and the number */
 }
 
-.footnotes{
-    display: none;
+.footnotes {
+  display: none;
 }
 
 .sidenote {
@@ -155,13 +153,12 @@ sup::before {
 }
 
 .sidenote.active {
-    display: block;
-    opacity: 1;
-    color:#ffc311;
+  display: block;
+  opacity: 1;
+  color: #ffc311;
 }
 
-
-.images{
+.images {
   position: relative;
   border: 0.5vw solid rgb(65, 79, 238);
   float: left; /* Float right so it sits in the right margin */
@@ -171,7 +168,7 @@ sup::before {
   margin-right: auto;
   display: block;
   object-fit: cover;
-  margin-top:0%;
+  margin-top: 0%;
   margin-bottom: 2%;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
@@ -201,7 +198,7 @@ sup::before {
   cursor: pointer;
 }
 
-.imageTitle{
+.imageTitle {
   position: relative;
   float: left; /* Float right so it sits in the right margin */
   width: 11vw; /* Or 20em, or whatever width you like */
@@ -211,9 +208,9 @@ sup::before {
   font-size: 0.7em;
   font-style: italic;
   text-align: left;
-  color:rgb(65, 79, 238); ;
+  color: rgb(65, 79, 238);
 }
-.allimages{
+.allimages {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -233,7 +230,7 @@ sup::before {
 
 .citat1 {
   font-style: italic;
-  color:#ffc311;
+  color: #ffc311;
 }
 
 a.footnote-ref,
@@ -252,7 +249,7 @@ a.footnote-back:visited {
 .subtitle {
   font-size: 1.2em;
   margin-top: 15%;
-  color:rgb(238, 65, 65);
+  color: rgb(238, 65, 65);
   text-align: left;
   text-indent: 0em;
 }
@@ -261,23 +258,23 @@ a.footnote-back:visited {
   font-size: 3vw;
   line-height: 4.5vw;
   text-align: center;
-  color:rgb(65, 79, 238);
+  color: rgb(65, 79, 238);
   padding: 3%;
   width: 60%;
   word-wrap: normal;
-    word-break: keep-all;
-    hyphens: none;
+  word-break: keep-all;
+  hyphens: none;
   max-width: 80%; /* Allow flexibility */
   margin: 0 auto; /* Ensure horizontal centering */
   /* border: 0.7vw dotted rgb(231, 52, 52); */
 }
 
-.nosup{
-  color:rgb(65, 79, 238);
+.nosup {
+  color: rgb(65, 79, 238);
 }
 
-.nosup1{
-  color:#ffc311;
+.nosup1 {
+  color: #ffc311;
 }
 
 .nosup::before {
@@ -288,20 +285,20 @@ a.footnote-back:visited {
   content: ""; /* Choose your arrow from the list */
 }
 
-.section{
+.section {
   background: rgba(255, 253, 241, 0.9);
   position: relative;
   width: 100%;
   min-height: 100vh; /* Ensure each panel fills the viewport */
   height: 100vh; /* Set height to viewport */
-  overflow-y: hidden; 
-  overflow-x:hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .section1 {
-  padding:0;
-  background-color:rgb(255, 195, 17);
-  display: flex; 
+  padding: 0;
+  background-color: rgb(255, 195, 17);
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -309,18 +306,18 @@ a.footnote-back:visited {
 }
 
 .section10 {
-  padding:0;
-  background-color:rgb(65, 79, 238);
-  display: flex; 
+  padding: 0;
+  background-color: rgb(65, 79, 238);
+  display: flex;
   flex-direction: column;
-  gap:20px;
+  gap: 20px;
   justify-content: center;
   align-items: center;
   text-align: center;
   justify-content: center;
 }
 
-.last-title{
+.last-title {
   color: #ffc311;
   font-size: 2vw;
   line-height: 3.5vw;
@@ -331,7 +328,7 @@ a.footnote-back:visited {
   hyphens: none;
 }
 
-.last-title1{
+.last-title1 {
   color: #ffc311;
   font-size: 3vw;
   line-height: 4.5vw;
@@ -339,16 +336,16 @@ a.footnote-back:visited {
   padding: 2%;
   width: 60%;
   word-wrap: normal;
-    word-break: keep-all;
-    hyphens: none;
+  word-break: keep-all;
+  hyphens: none;
   max-width: 80%; /* Allow flexibility */
   margin: 0 auto; /* Ensure horizontal centering */
 }
 
-.arrow2{
+.arrow2 {
   transform: rotate(-90deg) scale(5);
   padding: 3%;
-  color:rgb(238, 65, 65);
+  color: rgb(238, 65, 65);
 }
 
 .text {
@@ -367,8 +364,8 @@ a.footnote-back:visited {
   display: none;
 }
 
-#sn2{
-    margin-top: -7%;
+#sn2 {
+  margin-top: -7%;
 }
 
 .text9 {
@@ -387,27 +384,27 @@ a.footnote-back:visited {
   display: none;
 }
 
-.arrow{
+.arrow {
   transform: rotate(90deg) scale(4);
   padding: 7%;
-  color:rgb(238, 65, 65);
+  color: rgb(238, 65, 65);
 }
 
 .last-paragraph {
   margin-bottom: 10%;
 }
 
-.section9{
-  background-color:rgb(255, 195, 17, 0.9);
+.section9 {
+  background-color: rgb(255, 195, 17, 0.9);
   margin-left: auto;
   margin-right: auto;
   max-height: 99vh;
   text-align: left;
 }
 
-.text9{
+.text9 {
   color: rgb(65, 79, 238);
-    word-wrap: break-word; /* ✅ Ensures long words/URLs break */
+  word-wrap: break-word; /* ✅ Ensures long words/URLs break */
   overflow-wrap: break-word; /* ✅ Ensures they fit within the width */
   white-space: normal; /* ✅ Allows wrapping */
 }
@@ -419,7 +416,7 @@ a.footnote-back:visited {
   width: 30%;
   color: rgb(238, 65, 65);
   padding: 5px;
-  font-weight:bold;
+  font-weight: bold;
 }
 
 .sidebar-menu ul {
@@ -472,13 +469,11 @@ a.footnote-back:visited {
   transform: rotate(180deg); /* Rotates the arrow */
 }
 
-#sn40{
+#sn40 {
   margin-top: 10%;
 }
 
-
 @media screen and (max-width: 850px) {
-
   body {
     width: 100%;
     font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD",
@@ -492,25 +487,25 @@ a.footnote-back:visited {
   }
 
   .images {
-      width: 90%; /* Full width or adjust accordingly */
-      display: block;
+    width: 90%; /* Full width or adjust accordingly */
+    display: block;
   }
-  .imageTitle{
+  .imageTitle {
     width: 11vw; /* Or 20em, or whatever width you like */
     margin-top: -0.5vw;
     margin-bottom: 2%;
     font-size: 0.7em;
     font-style: italic;
     text-align: left;
-    color:rgb(65, 79, 238); ;
+    color: rgb(65, 79, 238);
   }
-  .allimages{
+  .allimages {
     display: inline-block;
     flex-direction: column;
     gap: 1vw;
   }
 
-  .sidebar-menu{
+  .sidebar-menu {
     right: -23%;
   }
 
@@ -535,56 +530,56 @@ a.footnote-back:visited {
     max-width: 78%;
   }
 
-.section{
-  background: rgba(255, 253, 241, 0.9);
-  position: relative;
-  width: 100%;
-  min-height: 100vh; /* Ensure each panel fills the viewport */
-  height: 100vh; /* Set height to viewport */
-  overflow: hidden; /* Prevent content overflow */
-}
+  .section {
+    background: rgba(255, 253, 241, 0.9);
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Ensure each panel fills the viewport */
+    height: 100vh; /* Set height to viewport */
+    overflow: hidden; /* Prevent content overflow */
+  }
 
-.section9{
-  background-color:rgb(255, 195, 17, 0.9);
-}
-.section1{
-  background-color:rgb(255, 195, 17, 0.9);
-}
+  .section9 {
+    background-color: rgb(255, 195, 17, 0.9);
+  }
+  .section1 {
+    background-color: rgb(255, 195, 17, 0.9);
+  }
 
-.allimages {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
+  .allimages {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
 
-.images{
-  width: 100%;
-  position: relative;
-  border: 0.5vw solid rgb(65, 79, 238);
-  float: none; /* Float right so it sits in the right margin */
-  height: auto; /* Maintain aspect ratio */
-  margin-left: 0;
-  margin-right: auto;
-  display: block;
-  object-fit: cover;
-  margin-top:0%;
-  margin-bottom: 2%;
-}
+  .images {
+    width: 100%;
+    position: relative;
+    border: 0.5vw solid rgb(65, 79, 238);
+    float: none; /* Float right so it sits in the right margin */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 0;
+    margin-right: auto;
+    display: block;
+    object-fit: cover;
+    margin-top: 0%;
+    margin-bottom: 2%;
+  }
 
-.imageTitle{
-  position: relative;
-  float: none;
-  margin-left: 0; /* Slight negative margin to push it outside the page */
-  width: 100%;
-  margin-top: -0.5vw;
-  margin-bottom: 2%;
-  font-size: 0.7em;
-  font-style: italic;
-  text-align: left;
-  color:rgb(65, 79, 238); ;
-}
+  .imageTitle {
+    position: relative;
+    float: none;
+    margin-left: 0; /* Slight negative margin to push it outside the page */
+    width: 100%;
+    margin-top: -0.5vw;
+    margin-bottom: 2%;
+    font-size: 0.7em;
+    font-style: italic;
+    text-align: left;
+    color: rgb(65, 79, 238);
+  }
 
-/* .sup{
+  /* .sup{
   pointer-events: none;
   cursor: default;
 }
@@ -607,85 +602,184 @@ a.footnote-back:visited {
   cursor: default;
 } */
 
-.sidenote:before {
-  content: counter(sidenote-counter) " ";
-  font-size: .8rem;
-  top: -0.2rem;
-}
+  .sidenote:before {
+    content: counter(sidenote-counter) " ";
+    font-size: 0.8rem;
+    top: -0.2rem;
+  }
 
-.sidenote-number:after, .sidenote:before {
-  position: relative;
-  vertical-align: baseline;
-}
+  .sidenote-number:after,
+  .sidenote:before {
+    position: relative;
+    vertical-align: baseline;
+  }
 
-.sidenote {
-  position: relative;
-  float: none;
-  max-width: 70%;
-  width: 100%;
-  padding-left: 10%;
-  margin-top: 1%;
-}
+  .sidenote {
+    position: relative;
+    float: none;
+    max-width: 70%;
+    width: 100%;
+    padding-left: 10%;
+    margin-top: 1%;
+  }
 
+  .sidenote.active {
+    display: block;
+  }
 
-.sidenote.active {
-  display: block;
-}
+  .title {
+    font-size: 5.5vw;
+    line-height: 7vw;
+    text-align: center;
+    color: rgb(65, 79, 238);
+    padding: 5%;
+    width: 70%;
+    max-width: 80%; /* Allow flexibility */
+    margin: 0 auto; /* Ensure horizontal centering */
+    /* border: 0.7vw dotted rgb(231, 52, 52); */
+  }
 
-.title {
-  font-size: 5.5vw;
-  line-height: 7vw;
-  text-align: center;
-  color:rgb(65, 79, 238);
-  padding: 5%;
-  width: 70%;
-  max-width: 80%; /* Allow flexibility */
-  margin: 0 auto; /* Ensure horizontal centering */
-  /* border: 0.7vw dotted rgb(231, 52, 52); */
-}
+  .arrow {
+    transform: rotate(90deg) scale(3);
+    padding: 10%;
+    color: rgb(238, 65, 65);
+  }
 
-.arrow{
-  transform: rotate(90deg) scale(3);
-  padding: 10%;
-  color:rgb(238, 65, 65);
-}
+  .section10 {
+    background-color: rgb(65, 79, 238);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
 
-.section10 {
-  background-color:rgb(65, 79, 238);
-  padding:0;
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-}
+  .last-title {
+    color: #ffc311;
+    font-size: 3vw;
+    line-height: 3.5vw;
+    font-style: italic;
+    font-weight: bolder;
+  }
 
-.last-title{
-  color: #ffc311;
-  font-size: 3vw;
-  line-height: 3.5vw;
-  font-style: italic;
-  font-weight: bolder;
-}
+  .last-title1 {
+    color: #ffc311;
+    font-size: 5.5vw;
+    line-height: 7vw;
+    text-align: center;
+    padding: 5%;
+    width: 70%;
+    max-width: 80%; /* Allow flexibility */
+    margin: 0 auto; /* Ensure horizontal centering */
+  }
 
-.last-title1{
-  color: #ffc311;
-  font-size: 5.5vw;
-  line-height: 7vw;
-  text-align: center;
-  padding: 5%;
-  width: 70%;
-  max-width: 80%; /* Allow flexibility */
-  margin: 0 auto; /* Ensure horizontal centering */
-}
+  .arrow2 {
+    transform: translateY(-50%) rotate(-90deg) scale(5);
+    color: rgb(238, 65, 65);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 
-.arrow2{
-  transform: translateY(-50%) rotate(-90deg) scale(5); 
-  color:rgb(238, 65, 65);
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  .section11 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    background: rgb(238, 65, 65, 0.75);
+  }
   
-} 
+  .allbooks {
+    overflow-y: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column !important; /* Force column stacking */
+    align-items: center; /* Center books horizontally */
+    justify-content: center;
+    gap: 20px; /* Add spacing between books */
+    transform: none; /* Remove any previous transformations */
+    top: auto;
+    left: auto;
+    height: auto;
+  }
+  
+  .inside {
+    width: 55%;
+    position: relative;
+    overflow-y: scroll;
+    margin-left: auto;
+    margin-right: auto;
+    /* max-height: 99vh; */
+    left: 0%;
+    padding-left: 25%;
+    padding-right: 25%;
+    height: 100%;
+  }
+  
+  .book {
+    width: 80%; /* Adjust image size for mobile */
+    max-width: 300px; /* Prevent it from being too large */
+  }
+  .text11{
+    color: #ffc311;
+  }
+  
+  .book-title{
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+  margin-bottom: 10%;
+  }
+}
+
+.section11 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background: rgb(238, 65, 65, 0.75);
+}
+
+.allbooks {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  top: 50%;
+  left: 40%;
+  transform: translate(-40%, -50%);
+}
+
+.inside {
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 99vh;
+  overflow: scroll;
+  position: absolute;
+  left: 0%;
+  padding-left: 25%;
+  padding-right: 25%;
+  height: 100%;
+}
+
+.book {
+  width: 100%;
+  border: 0.5vw solid rgb(65, 79, 238);
+}
+.text11{
+  color: #ffc311;
+}
+
+.book-title{
+  color:#ffc311;
+  text-align: left;
+  font-size: 0.75em;
+  font-style: italic;
 }
