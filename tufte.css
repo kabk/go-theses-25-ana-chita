@@ -704,6 +704,7 @@ a.footnote-back:visited {
     top: auto;
     left: auto;
     height: auto;
+    margin-top: 60%;
   }
   
   .inside {
@@ -725,6 +726,20 @@ a.footnote-back:visited {
   }
   .text11{
     color: #ffc311;
+    position: relative;
+    left: -29%;
+  }
+
+  #femeia{
+    margin-top: 20%;
+  }
+
+  #cutezatorii {
+    margin-top: 60%;
+  }
+
+  #stiinta{
+    margin-top: 20%;
   }
   
   .book-title{
